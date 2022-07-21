@@ -1,19 +1,44 @@
-import express, { Express, Request, Response } from 'express';
-import dotenv from 'dotenv';
-const cors = require('cors');
+import express, { Express } from "express";
+import dotenv from "dotenv";
+import cors from "cors";
+import * as bodyParser from "body-parser";
+import path from "path";
+import * as runningAt from "running-at";
+import router from './routes';
 
 dotenv.config();
 
 const app: Express = express();
-const port = process.env.PORT || 3000;
+// const port = process.env.PORT || 3000;
 
-app.use(express.json());
-app.use(cors);
+app.use(bodyParser.json());
+app.use(cors());
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Express + TypeScript Server');
+if (process.env.NODE_ENV !== "development") {
+  app.use(express.static(path.join(__dirname, "../dist")));
+}
+
+app.use(router);
+
+app.get("*", (_req, res, next) => {
+  if (process.env.NODE_ENV === "development") {
+    next();
+    return;
+  }
+
+  res.sendFile(path.join(__dirname, "../dist", "index.html"));
 });
 
-app.listen(port, () => {
-  console.log(`⚡️[server]: Server is running at https://localhost:${port}`);
-});
+if (require.main === module) {
+  try {
+    const PORT = process.env.PORT || 3000;
+
+    app.listen(PORT, () => runningAt.print(PORT));
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.log(err);
+    process.exit(1);
+  }
+}
+
+export default app;
