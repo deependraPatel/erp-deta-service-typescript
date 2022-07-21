@@ -4,15 +4,21 @@ import cors from "cors";
 import * as bodyParser from "body-parser";
 import path from "path";
 import * as runningAt from "running-at";
-import router from './routes';
+
+import logs from "./utils/logs";
+import { routeLog, sendResponse, disableCaching } from "./middleware";
+import router from "./routes";
 
 dotenv.config();
 
 const app: Express = express();
-// const port = process.env.PORT || 3000;
+
+app.use(routeLog);
+app.use(sendResponse);
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use(disableCaching);
 
 if (process.env.NODE_ENV !== "development") {
   app.use(express.static(path.join(__dirname, "../dist")));
@@ -28,6 +34,32 @@ app.get("*", (_req, res, next) => {
 
   res.sendFile(path.join(__dirname, "../dist", "index.html"));
 });
+
+app.use(
+  (
+    err: any,
+    _req: express.Request,
+    res: express.Response,
+    next: express.NextFunction
+  ) => {
+    if (!err) {
+      return next();
+    }
+
+    let returnStatus;
+    let message = err.message || "An unkown error ocurred, please try again.";
+    if (err.name === "HTTPError") {
+      logs.warn("Metdata parsing failed: " + err.message);
+      returnStatus = 500;
+      message = "Could not get metadata for url";
+    } else {
+      logs.fatal(err);
+      returnStatus = typeof err === "number" ? err : 400;
+    }
+
+    res.fail(returnStatus, err.message, message);
+  }
+);
 
 if (require.main === module) {
   try {
