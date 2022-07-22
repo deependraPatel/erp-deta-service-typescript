@@ -1,0 +1,13 @@
+var in which we store the data						NaN----> Not A Number
+in javascript there is a dynamic data type for e.g. 
+<script>
+	a=20;
+	a="sasa";
+	document.write(a)  
+</script>
+It always pick the second value, because of overwrite the value
+<script>
+	a=20.58;
+	document.write(typeof a)  
+</script>
+typeof is a keyword which shows a data type

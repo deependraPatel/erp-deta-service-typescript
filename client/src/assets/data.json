@@ -1,0 +1,742 @@
+{
+    "reportedStates": [{
+            "id": null,
+            "endTime": null,
+            "state": "DISCONNECTED",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 06:00:00"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "UP",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 06:36:58"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 06:50:43"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 06:51:10"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 06:51:55"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 06:53:25"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 06:56:33"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 07:00:17"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 07:01:02"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "UP",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 07:06:30"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 07:08:26"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 07:09:09"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 07:44:36"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 07:53:33"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 07:58:07"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "UP",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 08:18:07"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 08:40:51"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 08:48:19"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 08:53:40"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 08:57:19"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 09:30:56"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 09:31:15"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 09:34:47"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 09:38:05"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 09:44:46"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 09:58:39"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 10:00:52"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 10:08:17"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 10:13:09"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 10:18:57"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 10:28:47"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 10:34:41"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 10:35:37"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 10:43:56"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 10:44:41"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 10:45:18"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 10:57:25"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 10:57:57"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 11:03:40"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 11:06:06"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 11:06:49"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 11:06:56"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 11:38:55"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 11:39:10"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 11:47:36"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 11:59:40"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 12:07:59"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "UP",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 12:10:59"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 12:30:58"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 12:31:16"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 12:34:31"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 12:34:49"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 12:35:51"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 12:36:28"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 13:46:25"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 13:46:33"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 13:48:46"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "UP",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 14:08:46"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 14:09:59"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 14:10:26"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 14:25:10"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "UP",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 14:26:27"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 14:36:57"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 14:37:26"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 14:56:51"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 15:00:39"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 15:06:15"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 15:08:44"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 15:14:15"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 15:19:10"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "UP",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 15:19:10"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 15:20:32"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 15:23:00"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 15:34:01"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 15:34:44"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 15:48:09"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 15:50:48"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 16:00:50"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 16:00:59"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "UP",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 16:00:59"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 16:02:32"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 16:02:53"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 16:03:48"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 16:04:04"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 16:21:49"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 16:23:55"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 16:33:21"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "PRINTING",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 16:34:27"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "READY",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 16:35:18"
+        },
+        {
+            "id": null,
+            "endTime": null,
+            "state": "UP",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 16:35:19"
+        },
+        {
+            "id": null,
+            "endTime": "2021-03-09 22:15:34",
+            "state": "DISCONNECTED",
+            "inputRequired": null,
+            "input": null,
+            "timestamp": "2021-03-09 18:20:00"
+        }
+    ],
+    "statesAggregation": {
+        "DISCONNECTED": 27.9359,
+        "ERROR": 0.0,
+        "OFF": 0.0,
+        "PRINTING": 37.398777,
+        "READY": 16.44856,
+        "UP": 18.216763
+    },
+    "shiftsMetaData": [
+
+    ]
+}
