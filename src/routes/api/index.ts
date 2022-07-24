@@ -1,8 +1,9 @@
 import express from "express";
-import apiRouter from "./api";
+
+import formRouter from "./form";
 
 export const router = express.Router();
 
-router.use("/api", apiRouter);
+router.use("/forms", formRouter);
 
 export default router;
