@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "service for erp backend",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "install:ci": "npm ci && cd client && npm ci",
+    "install:ci": "npm install && cd client && npm install",
     "build:server": "npx tsc -p src/tsconfig.json",
     "start:server": "node build/index.js",
     "start-dev-server": "concurrently \"npx tsc --watch\" \"nodemon -q build/index.js\"",
