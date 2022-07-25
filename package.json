@@ -4,9 +4,12 @@
   "description": "service for erp backend",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc",
-    "start": "node build/index.js",
-    "start-dev": "concurrently \"npx tsc --watch\" \"nodemon -q build/index.js\""
+    "build:server": "npx tsc -p src/tsconfig.json",
+    "start:server": "node build/index.js",
+    "start-dev-server": "concurrently \"npx tsc --watch\" \"nodemon -q build/index.js\"",
+    "build:client": "cd client && npm run build",
+    "start:client": "cd client && npm run start",
+    "build": "npm run build:server && npm run build:client"
   },
   "repository": {
     "type": "git",
