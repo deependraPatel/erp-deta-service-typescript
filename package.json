@@ -4,7 +4,7 @@
   "description": "service for erp backend",
   "main": "index.js",
   "scripts": {
-    "install:ci": "npm install && cd client && npm install",
+    "install:ci": "npm ci && cd client && npm ci",
     "build:server": "npx tsc -p src/tsconfig.json",
     "start:server": "node build/index.js",
     "start-dev-server": "concurrently \"npx tsc --watch\" \"nodemon -q build/index.js\"",
