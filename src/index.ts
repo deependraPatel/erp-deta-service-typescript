@@ -20,17 +20,17 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(disableCaching);
 
-// if (process.env.NODE_ENV !== "development") {
-app.use(express.static(path.join(__dirname, "../dist")));
-// }
+if (process.env.NODE_ENV !== "development") {
+  app.use(express.static(path.join(__dirname, "../dist")));
+}
 
 app.use(router);
 
 app.get("*", (_req, res, next) => {
-  // if (process.env.NODE_ENV === "development") {
-  //   next();
-  //   return;
-  // }
+  if (process.env.NODE_ENV === "development") {
+    next();
+    return;
+  }
 
   res.sendFile(path.join(__dirname, "../dist", "index.html"));
 });
