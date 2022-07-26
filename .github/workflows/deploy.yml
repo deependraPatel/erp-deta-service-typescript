@@ -19,7 +19,7 @@ jobs:
                   node-version: 12
             - name: Cache node modules
               uses: c-hive/gha-npm-cache@v1
-              - uses: ngworker/angular-versions-action@v4
+            - uses: ngworker/angular-versions-action@v4
               with:
                   angular-version: 12.0.x
             - name: Install dependencies
