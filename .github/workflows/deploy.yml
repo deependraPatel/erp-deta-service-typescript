@@ -17,9 +17,9 @@ jobs:
               uses: actions/setup-node@v2
               with:
                   node-version: 12
-            - uses: LayZeeDK/setup-angular@v1
+            - uses: ngworker/angular-versions-action@v4
               with:
-                  angular-version: 12
+                  angular-version: 12.0.x
             - name: Cache node modules
               uses: c-hive/gha-npm-cache@v1
             - name: Install dependencies
