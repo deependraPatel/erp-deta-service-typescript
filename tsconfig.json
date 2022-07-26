@@ -33,7 +33,6 @@
     "dist"
   ],
   "files": [
-    "src/**/*.ts",
     "package.json"
   ]
 }
