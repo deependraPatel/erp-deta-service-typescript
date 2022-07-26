@@ -1,0 +1,363 @@
+<h2 mat-dialog-title>Form Elements</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="elementsForm" class="form-horizontal">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <mat-form-field
+            class="form-full-width"
+            appearance="outline"
+            floatLabel="never"
+          >
+            <mat-label>Form control Name:</mat-label>
+            <input
+              matInput
+              placeholder="Form control Name"
+              formControlName="formKey"
+              required
+            />
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field
+            class="form-full-width"
+            appearance="outline"
+            floatLabel="never"
+          >
+            <mat-label>Label:</mat-label>
+            <input
+              matInput
+              placeholder="Label"
+              formControlName="label"
+              required
+            />
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field
+            class="form-full-width"
+            appearance="outline"
+            floatLabel="never"
+          >
+            <mat-label>Title:</mat-label>
+            <input
+              matInput
+              placeholder="Title"
+              formControlName="title"
+              required
+            />
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field
+            class="form-full-width"
+            appearance="outline"
+            floatLabel="never"
+          >
+            <mat-label>Type:</mat-label>
+            <mat-select formControlName="type" required>
+              <mat-option
+                *ngFor="let option of formElementsArray"
+                [value]="option.value"
+                >{{option.title}}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+          <div class="form-group">
+            <mat-form-field
+              class="form-full-width"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label>Class:</mat-label>
+              <input
+                matInput
+                placeholder="Classes with comma"
+                formControlName="classes"
+                required
+              />
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="col" *ngIf="formControls.type.value === 'select'">
+        <ng-container formGroupName="options">
+          <div class="form-group mb-2">
+            <mat-slide-toggle formControlName="isValuesFromDataModel">
+              Is Values from DB
+            </mat-slide-toggle>
+          </div>
+          <div
+            class="form-group"
+            *ngIf="elementsForm.value.options.isValuesFromDataModel"
+          >
+            <mat-form-field
+              class="form-full-width"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label>Data Model:</mat-label>
+              <input
+                matInput
+                placeholder="Data Model"
+                formControlName="dataModel"
+                required
+              />
+            </mat-form-field>
+          </div>
+          <div
+            class="form-group"
+            *ngIf="!elementsForm.value.options.isValuesFromDataModel"
+          >
+            <mat-form-field
+              class="form-full-width"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label>Values:</mat-label>
+              <mat-chip-list #chipList aria-label="Fruit selection">
+                <mat-chip
+                  *ngFor="let value of selectValues"
+                  [selectable]="selectable"
+                  [removable]="removable"
+                  (removed)="remove(value)"
+                >
+                  {{value}}
+                  <button matChipRemove *ngIf="removable">
+                    <mat-icon>cancel</mat-icon>
+                  </button>
+                </mat-chip>
+                <input
+                  placeholder="New Value..."
+                  #valueInput
+                  [matChipInputFor]="chipList"
+                  [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                  (matChipInputTokenEnd)="add($event)"
+                />
+              </mat-chip-list>
+            </mat-form-field>
+          </div>
+          <div formGroupName="condition">
+            <div class="form-group">
+              <mat-slide-toggle formControlName="isCondition">
+                Is Condition On Select Values
+              </mat-slide-toggle>
+            </div>
+            <div
+              class="mt-2"
+              *ngIf="elementsForm.value.options.condition.isCondition"
+            >
+              <div class="form-group">
+                <mat-form-field
+                  class="form-full-width"
+                  appearance="outline"
+                  floatLabel="never"
+                >
+                  <mat-label>Form Field:</mat-label>
+                  <input
+                    matInput
+                    placeholder="Form Field"
+                    formControlName="formField"
+                  />
+                </mat-form-field>
+              </div>
+              <div class="form-group">
+                <mat-form-field
+                  class="form-full-width"
+                  appearance="outline"
+                  floatLabel="never"
+                >
+                  <mat-label>Data Key:</mat-label>
+                  <input
+                    matInput
+                    placeholder="Data Key"
+                    formControlName="dataKey"
+                  />
+                </mat-form-field>
+              </div>
+              <div class="form-group">
+                <mat-form-field
+                  class="form-full-width"
+                  appearance="outline"
+                  floatLabel="never"
+                >
+                  <mat-label>Form Field Key:</mat-label>
+                  <input
+                    matInput
+                    placeholder="Form Field Key"
+                    formControlName="formFieldKey"
+                  />
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <div class="col" formGroupName="validations">
+        <h4>Validations</h4>
+        <div class="form-group">
+          <div class="d-inline">
+            <mat-checkbox
+              class="m-2"
+              formControlName="required"
+              labelPosition="after"
+            >
+              Is Required
+            </mat-checkbox>
+          </div>
+          <div class="d-inline">
+            <mat-checkbox
+              class="m-2"
+              formControlName="email"
+              labelPosition="after"
+            >
+              Is Email
+            </mat-checkbox>
+          </div>
+          <div class="d-inline">
+            <mat-checkbox
+              class="m-2"
+              formControlName="nullValidator"
+              labelPosition="after"
+            >
+              Is Null Validator
+            </mat-checkbox>
+          </div>
+          <div class="d-inline">
+            <mat-checkbox
+              class="m-2"
+              formControlName="isMin"
+              labelPosition="after"
+            >
+              Is Min
+            </mat-checkbox>
+          </div>
+          <div class="d-inline">
+            <mat-checkbox
+              class="m-2"
+              formControlName="isMax"
+              labelPosition="after"
+            >
+              Is Max
+            </mat-checkbox>
+          </div>
+          <div class="d-inline">
+            <mat-checkbox
+              class="m-2"
+              formControlName="isMinLength"
+              labelPosition="after"
+            >
+              Is Min Length
+            </mat-checkbox>
+          </div>
+          <div class="d-inline">
+            <mat-checkbox
+              class="m-2"
+              formControlName="isMaxLength"
+              labelPosition="after"
+            >
+              Is Max Length
+            </mat-checkbox>
+          </div>
+          <div class="d-inline">
+            <mat-checkbox
+              class="m-2"
+              formControlName="isPattern"
+              labelPosition="after"
+            >
+              Is Pattern
+            </mat-checkbox>
+          </div>
+        </div>
+        <div class="form-group" *ngIf="elementsForm.value.validations.isMin">
+          <mat-form-field
+            class="form-full-width"
+            appearance="outline"
+            floatLabel="never"
+          >
+            <mat-label>Min Value:</mat-label>
+            <input
+              matInput
+              placeholder="Min Value"
+              formControlName="min"
+              required
+            />
+          </mat-form-field>
+        </div>
+        <div class="form-group" *ngIf="elementsForm.value.validations.isMax">
+          <mat-form-field
+            class="form-full-width"
+            appearance="outline"
+            floatLabel="never"
+          >
+            <mat-label>Max Value:</mat-label>
+            <input
+              matInput
+              placeholder="Max Value"
+              formControlName="max"
+              required
+            />
+          </mat-form-field>
+        </div>
+        <div
+          class="form-group"
+          *ngIf="elementsForm.value.validations.isMinLength"
+        >
+          <mat-form-field
+            class="form-full-width"
+            appearance="outline"
+            floatLabel="never"
+          >
+            <mat-label>Min Length:</mat-label>
+            <input
+              matInput
+              placeholder="Min Length"
+              formControlName="minLength"
+              required
+            />
+          </mat-form-field>
+        </div>
+        <div
+          class="form-group"
+          *ngIf="elementsForm.value.validations.isMaxLength"
+        >
+          <mat-form-field
+            class="form-full-width"
+            appearance="outline"
+            floatLabel="never"
+          >
+            <mat-label>Max Length:</mat-label>
+            <input
+              matInput
+              placeholder="Max Length"
+              formControlName="maxLength"
+              required
+            />
+          </mat-form-field>
+        </div>
+        <div
+          class="form-group"
+          *ngIf="elementsForm.value.validations.isPattern"
+        >
+          <mat-form-field
+            class="form-full-width"
+            appearance="outline"
+            floatLabel="never"
+          >
+            <mat-label>Pattern:</mat-label>
+            <input
+              matInput
+              placeholder="Pattern"
+              formControlName="pattern"
+              required
+            />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <!-- <button mat-button mat-dialog-close>Cancel</button> -->
+  <button mat-button cdkFocusInitial (click)="closeDialog()">Save</button>
+</mat-dialog-actions>

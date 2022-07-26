@@ -1,0 +1,114 @@
+<header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-color-secondary fixed-top">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Navbar brand -->
+      <a class="navbar-brand me-2" routerLink="/">
+        <img
+          src="assets/img/semi-logo.jpg"
+          height="30"
+          alt="TTA ERP LOGO"
+          loading="TTA ERP LOGO"
+        />
+      </a>
+
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        (click)="buttonsNav.toggle()"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Collapsible wrapper -->
+      <div
+        class="collapse navbar-collapse"
+        id="navbarButtonsExample"
+        mdbCollapse
+        #buttonsNav="mdbCollapse"
+      >
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">The Tech Assembles</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+
+        <div class="d-flex align-items-center">
+          <ul class="navbar-nav">
+            <li mdbDropdown class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle hidden-arrow"
+                id="navbarDropdownMenuLink"
+                role="button"
+                mdbDropdownToggle
+                aria-expanded="false"
+              >
+                <i class="fas fa-bell"></i>
+                <span class="badge rounded-pill badge-notification bg-danger"
+                  >1</span
+                >
+              </a>
+              <ul
+                mdbDropdownMenu
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item" href="#">Some news</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Another news</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li mdbDropdown class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdownMenuLink"
+                role="button"
+                mdbDropdownToggle
+                aria-expanded="false"
+              >
+                <img
+                  src="https://mdbootstrap.com/img/Photos/Avatars/img (31).webp"
+                  class="rounded-circle"
+                  height="22"
+                  alt=""
+                  loading="lazy"
+                />
+              </a>
+              <ul
+                mdbDropdownMenu
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item" href="#">Action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Another action</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+</header>

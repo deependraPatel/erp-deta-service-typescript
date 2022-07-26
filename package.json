@@ -4,10 +4,13 @@
   "description": "service for erp backend",
   "main": "index.js",
   "scripts": {
-    "install:ci": "npm ci",
-    "build": "npx tsc",
+    "install:ci": "npm ci && cd client && npm ci",
+    "build:server": "npx tsc -p src/tsconfig.json",
     "start:server": "node build/index.js",
-    "start-dev-server": "concurrently \"npx tsc --watch\" \"nodemon -q build/index.js\""
+    "start-dev-server": "concurrently \"npx tsc --watch\" \"nodemon -q build/index.js\"",
+    "build:client": "cd client && npm run build",
+    "start:client": "cd client && npm run start",
+    "build": "npm run build:server && npm run build:client"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,7 @@
     "cors": "^2.8.5",
     "deta": "^1.1.0",
     "dotenv": "^16.0.1",
+    "ejs": "^3.1.6",
     "express": "^4.18.1",
     "nanoid": "^3.1.30",
     "running-at": "^0.3.22",
@@ -31,6 +35,7 @@
     "@betahuhn/config": "^1.2.0",
     "@types/body-parser": "^1.19.2",
     "@types/cors": "^2.8.12",
+    "@types/ejs": "^3.1.0",
     "@types/express": "^4.17.13",
     "@types/node": "^15.14.9",
     "@types/signale": "^1.4.4",

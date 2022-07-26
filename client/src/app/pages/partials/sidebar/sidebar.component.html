@@ -1,0 +1,44 @@
+<div class="sidebar-inner">
+  <div
+    class="sidebar-width"
+    style="
+      will-change: width;
+      transition: width 300ms cubic-bezier(0.2, 0, 0, 1) 0s;
+    "
+    [style.width]="sideBarWidth"
+  >
+    <div class="sidebar-content">
+      <div class="sidebar-main">
+        <div class="side-nav-container">
+          <div class="side-nav-main">
+            <div class="side-nav-flex">
+              <div class="side-nav mt-4">
+                <!-- THIS IS NESTED  -->
+                <div
+                  role="presentation"
+                  class="side-nav-el"
+                  *ngFor="let menu of menus"
+                >
+                  <a
+                    class="nav-link"
+                    [routerLink]="menu.path"
+                    [title]="menu?.title"
+                    routerLinkActive="active"
+                  >
+                    <div class="side-nav-icon text-white">
+                      <i class="nav-icon" [class]="menu.iconClass"></i>
+                    </div>
+                    <div class="side-nav-title">
+                      <div class="span-name text-white">{{ menu.label }}</div>
+                    </div>
+                  </a>
+                </div>
+                <!-- END NESTED  -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
