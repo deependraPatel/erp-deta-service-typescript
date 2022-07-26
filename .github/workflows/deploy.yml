@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm run install:ci
       - name: Run build command
-        run: npm run build:server
+        run: npm run build
       - name: Deploy to Deta
         uses: BogDAAAMN/deta-deploy-action@v1.0.1
         with:
