@@ -1,0 +1,82 @@
+<main>
+  <app-header></app-header>
+  <div class="body-container">
+    <div
+      class="left-sidebar"
+      [ngClass]="{ 'mini-side-bar': isMiniSideBar && !sideNavHoverEffect }"
+    >
+      <app-sidebar
+        [sideBarWidth]="sideBarWidth"
+        (mouseenter)="manageSidebarHover(false)"
+        (mouseleave)="manageSidebarHover(true)"
+      ></app-sidebar>
+      <div class="left-sidebar-partition">
+        <div class="letf-side-border"></div>
+        <div class="side-gap">
+          <div class="side-gap-border"></div>
+        </div>
+        <div>
+          <div role="presentation">
+            <button class="side-shift-button" (click)="switchSideBar()">
+              <i class="fas fa-outdent" *ngIf="!isMiniSideBar"></i>
+              <i class="fas fa-indent" *ngIf="isMiniSideBar"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="main-content"
+      style="
+        will-change: padding-left;
+        transition: padding-left 300ms cubic-bezier(0.2, 0, 0, 1) 0s;
+      "
+      [style.paddingLeft]="sideBarWidth"
+      [ngClass]="{ 'mini-side-bar': isMiniSideBar && !sideNavHoverEffect }"
+    >
+      <div class="main-content-wrapper">
+        <div class="main-content-inner">
+          <div class="px-4 py-3">
+            <div class="container-fluid">
+              <div class="row" *ngIf="routerData && routerData.title">
+                <div class="col-lg-7 tab-title">
+                  <h1 class="font-family-lato mb-1">{{ routerData.title }}</h1>
+                  <h4 class="font-family-lato mb-1" *ngIf="routerData.subTitle">
+                    {{ routerData.subTitle }}
+                  </h4>
+                </div>
+                <div
+                  class="col-lg-5 d-flex flex-row-reverse align-items-center"
+                >
+                  <div class="" *ngIf="!!routerData && routerData.buttons">
+                    <button
+                      mat-raised-button
+                      *ngFor="let button of routerData.buttons"
+                      class="ms-1"
+                      [class]="button.class"
+                      [routerLink]="button.route"
+                    >
+                      <i
+                        *ngIf="button.iconClass"
+                        [class]="button.iconClass"
+                        class="me-2"
+                      ></i>
+                      {{ button.label }}
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <hr class="mt-1 mb-2" />
+                </div>
+              </div>
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer [sideBarWidth]="sideBarWidth"></app-footer>
+</main>

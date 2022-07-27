@@ -1,0 +1,120 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+@import "~mdb-angular-ui-kit/assets/scss/mdb.scss";
+
+html,
+body {
+  height: 100%;
+}
+.mat-body,
+.mat-body-1,
+.mat-typography,
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  margin: 0;
+  font-family: "lato";
+  font-size: 1rem;
+  max-width: 100%;
+  overflow-x: hidden;
+  color: white;
+}
+
+.font-size-13 {
+  font-size: 13px !important;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.centered {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-color-primary {
+  background-color: #e27625;
+}
+
+.bg-color-secondary {
+  background-color: #e27625;
+}
+
+.font-family-lato {
+  font-family: "lato" !important;
+}
+
+.form-horizontal {
+  width: 100%;
+}
+
+.form-full-width {
+  width: 100%;
+}
+
+.mat-input-element {
+  font-family: "lato" !important;
+  font-size: 15px !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-start,
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border-radius: 0 !important;
+}
+
+.mat-flat-button.mat-accent {
+  background-color: #ff9900;
+}
+.mat-flat-button.mat-primary {
+  background-color: #ff9900;
+}
+
+button.mat-accent {
+  border-radius: 5px;
+  font-family: "lato-bold";
+  font-size: 22px;
+  background-color: #ffb800;
+  padding: 10px 60px;
+}
+
+.bg-acent {
+  background-color: #ffb800;
+  color: #0a1b4b;
+}
+
+.font-size-50 {
+  font-size: 50px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.cursor-hand {
+  cursor: pointer;
+}
+
+/* side bar */
+.mini-side-bar {
+  i.nav-icon {
+    font-size: 1rem;
+  }
+  .side-nav-title {
+    display: none !important;
+  }
+  .active {
+    background-color: #e27625 !important;
+  }
+}
+
+.form-action-buttons {
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+}

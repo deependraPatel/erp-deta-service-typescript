@@ -1,4 +1,4 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. 
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -14,7 +14,7 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es2017",
     "module": "es2020",
     "lib": [
       "es2018",
@@ -22,35 +22,9 @@
     ]
   },
   "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
-} */
-{
-"compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "downlevelIteration": true,
-    "module": "esnext",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": false,
-    "experimentalDecorators": true,
-    "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ],
-    "paths": {
-      "angular-admin-lte": [
-        "library/angular-admin-lte/src"
-      ]
-    }
   }
 }

@@ -1,0 +1,152 @@
+<div class="row mt-2">
+  <div class="col-lg-12">
+    <form
+      class="form-horizontal"
+      [formGroup]="dynamicForm"
+      (ngSubmit)="saveForm()"
+    >
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <mat-form-field
+              class="form-full-width"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label>Form Title:</mat-label>
+              <input
+                matInput
+                placeholder="Form Title"
+                formControlName="formTitle"
+                required
+              />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <mat-form-field
+              class="form-full-width"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label>Form Sub Title:</mat-label>
+              <input
+                matInput
+                placeholder="Form Sub Title"
+                formControlName="formSubTitle"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <mat-form-field
+              class="form-full-width"
+              appearance="outline"
+              floatLabel="never"
+            >
+              <mat-label>Data Model Name:</mat-label>
+              <input
+                matInput
+                placeholder="Data Model Name"
+                formControlName="dataModelName"
+                required
+              />
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <ng-container formArrayName="rows">
+        <div
+          class="row"
+          *ngFor="let row of getFormRows.controls; let i = index"
+        >
+          <div class="col-lg-12 d-flex flex-row-reverse">
+            <button
+              mat-flat-button
+              type="button"
+              (click)="removeRow(i)"
+              color="warn"
+            >
+              Delete Row
+            </button>
+            <button
+              mat-raised-button
+              color="primary"
+              type="button"
+              class="me-2"
+              (click)="addNewColumn(i)"
+            >
+              Add new column
+            </button>
+          </div>
+          <ng-container [formGroupName]="i">
+            <div class="row" formArrayName="columns">
+              <div
+                class="col d-flex flex-row"
+                *ngFor="let column of getColumnFormControl(i); let j = index"
+              >
+                <div class="text-break">
+                  {{ dynamicForm.value.rows[i].columns[j].elementJsonStiring }}
+                </div>
+                <div class="full-width">
+                  <mat-menu #menu="matMenu">
+                    <button
+                      type="button"
+                      mat-menu-item
+                      color="warn"
+                      aria-label="Edit this columns"
+                      (click)="openDialog(i, j, dynamicForm.value.rows[i].columns[j].elementJsonStiring)"
+                    >
+                      <mat-icon>edit</mat-icon>
+                      Edit
+                    </button>
+                    <button
+                      type="button"
+                      mat-menu-item
+                      color="warn"
+                      (click)="removeColumn(i, j)"
+                      aria-label="Delete this columns"
+                    >
+                      <mat-icon>delete</mat-icon>
+                      Delete
+                    </button>
+                  </mat-menu>
+                  <button
+                    type="button"
+                    mat-icon-button
+                    [matMenuTriggerFor]="menu"
+                    #menuTrigger
+                  >
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+      <div class="form-action-buttons">
+        <button type="submit" class="btn btn-success" [disabled]="isLoader">
+          <span class="align-middle">Save</span>
+          <mat-progress-spinner
+            class="d-inline ms-1"
+            color="accent"
+            mode="indeterminate"
+            diameter="15"
+            *ngIf="isLoader"
+          >
+          </mat-progress-spinner>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row mt-2">
+  <div class="col-lg-12">
+    <button type="button" class="btn btn-primary" (click)="addNewRow()">
+      Add new row
+    </button>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<form [formGroup]="formName" (ngSubmit)="onSubmit()">
+  <div class="row" *ngFor="let row of jsonFormData.rows">
+    <div class="col" *ngFor="let column of row.columns">
+      <ng-container *ngIf="column.elements">
+        <!-- INPUTS AND TEXTAREA -->
+        <div
+          class="form-group"
+          *ngIf="
+            !['select', 'radio', 'checkbox', 'toggle'].includes(
+              column.elements.type
+            )
+          "
+        >
+          <mat-form-field
+            class="form-full-width"
+            appearance="outline"
+            floatLabel="never"
+          >
+            <mat-label>{{ column.elements.label }}:</mat-label>
+            <input
+              matInput
+              [type]="column.elements.type"
+              [placeholder]="column.elements.label"
+              [formControlName]="column.elements.formKey"
+              [required]="column.elements.validations.required ? true : false"
+              *ngIf="textTypes.includes(column.elements.type)"
+            />
+            <textarea
+              matInput
+              [formControlName]="column.elements.formKey"
+              [required]="column.elements.validations.required ? true : false"
+              *ngIf="column.elements.type === 'textarea'"
+            ></textarea>
+          </mat-form-field>
+        </div>
+        <!-- END INPUTS AND TEXTAREA -->
+
+        <!-- SELECT -->
+        <div class="form-group">
+            
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</form>

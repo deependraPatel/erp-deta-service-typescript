@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
+    path: '',
+    loadChildren: () =>
+      import('./pages/pages.module').then((m) => m.PagesModule),
   },
-  { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: 'auth', pathMatch: 'full' },
-  { path: '**', redirectTo: 'login', pathMatch: 'full' },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./login/login.module').then((m) => m.LoginModule),
+  },
 ];
 
 @NgModule({

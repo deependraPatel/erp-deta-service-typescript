@@ -1,3 +1,3 @@
 const app = require('./build')
 
-module.exports = app.default
+module.exports = app.default;

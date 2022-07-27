@@ -1,0 +1,130 @@
+.sidebar-inner {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 3px;
+
+  .sidebar-width {
+    height: 100%;
+    position: relative;
+
+    .sidebar-content {
+      box-sizing: border-box;
+      height: 100%;
+      left: 0px;
+      min-width: 240px;
+      overflow-x: hidden;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      background-color: rgb(244, 245, 247);
+      color: rgb(66, 82, 110);
+      animation-duration: 0.22s;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.2, 0, 0, 1);
+      transition-property: boxShadow, transform;
+      transition-duration: 0.22s;
+      transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+      background-color: #1f1f1f;
+
+      .sidebar-main {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden auto;
+        width: 100%;
+
+        .side-nav-container {
+          position: relative;
+          flex: 1 1 100%;
+          overflow-y: hidden;
+
+          .side-nav-main {
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+
+            .side-nav-flex {
+              display: flex;
+              flex-direction: column;
+              flex-basis: 100%;
+              height: 100%;
+              -webkit-box-pack: start;
+              justify-content: flex-start;
+              overflow-y: auto;
+              position: relative;
+
+              .side-nav {
+                box-sizing: border-box;
+                padding-bottom: 12px;
+
+                .side-nav-el {
+                  width: 100%;
+                  -webkit-box-align: center;
+                  align-items: center;
+                  display: flex;
+                  flex-direction: column;
+                  -webkit-box-pack: justify;
+                  justify-content: space-between;
+                  border-bottom: 1px solid;
+
+                  .active {
+                    background-color: #e27625;
+                  }
+
+                  a.nav-link {
+                    -webkit-box-align: center;
+                    align-items: center;
+                    border: none;
+                    border-radius: 3px;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                    display: flex;
+                    flex-shrink: 0;
+                    height: 40px;
+                    outline: none;
+                    text-align: left;
+                    text-decoration: none;
+                    width: 100%;
+
+                    .side-nav-icon {
+                      -webkit-box-align: center;
+                      align-items: center;
+                      display: flex;
+                      flex-shrink: 0;
+                      margin-right: 16px;
+                      color: rgb(0, 82, 204);
+                    }
+
+                    .side-nav-title {
+                      display: flex;
+                      flex-direction: column;
+                      -webkit-box-flex: 1;
+                      flex-grow: 1;
+                      overflow-x: hidden;
+
+                      .span-name {
+                        flex: 1 1 auto;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        line-height: 1.14286;
+                        color: rgb(0, 82, 204);
+                      }
+                    }
+                  }
+                }
+                .side-nav-el:first-child {
+                  border-top: 1px solid;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

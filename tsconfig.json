@@ -30,11 +30,9 @@
   },
   "exclude": [
     "node_modules",
-    ".nuxt",
     "dist"
   ],
   "files": [
-    "src/**/*.ts",
     "package.json"
   ]
 }
