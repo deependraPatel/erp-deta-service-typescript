@@ -2,6 +2,7 @@ import express, { Express } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import * as bodyParser from "body-parser";
+import compression from 'compression';
 import path from "path";
 import * as runningAt from "running-at";
 
@@ -17,6 +18,7 @@ app.use(routeLog);
 app.use(sendResponse);
 
 app.use(bodyParser.json());
+app.use(compression());
 app.use(cors());
 app.use(disableCaching);
 

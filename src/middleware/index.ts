@@ -6,6 +6,9 @@ import { messages } from "../utils/response-status-codes";
 const ignoreRequestStrings: Array<string> = [
   "js/",
   "css/",
+  "img/",
+  "static/",
+  "_nuxt",
   "manifest.json",
 ]; // Don't log request if one of the strings are in URL
 
