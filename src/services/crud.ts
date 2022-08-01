@@ -16,6 +16,7 @@ export default class Crud {
 			key: generateKey(this.descendingOrder),
 			id: generateId(),
 			addedAt: new Date(),
+			updateAt: new Date(),
 			...data,
 		};
 
@@ -35,6 +36,7 @@ export default class Crud {
 			key: undefined,
 			id: undefined,
 			addedAt: undefined,
+			updateAt: new Date(),
 		};
 
 		await this.db.update(newItem, item.key);
