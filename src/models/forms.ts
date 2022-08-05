@@ -52,6 +52,7 @@ export class Forms {
 	}
 
 	static async create(formData: FormsModel): Promise<Forms> {
+		formData.routePath = formData.dataModelName.trim().replace(/ /g, '-');
 		const newCrate = await db.create(formData);
 		return new Forms(newCrate);
 	}
