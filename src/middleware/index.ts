@@ -67,10 +67,7 @@ export function sendResponse(
 		res.json({
 			status: 200,
 			message: "ok",
-			...(data && data.last && { last: data.last }),
-			...(data && data.count !== undefined && data.items !== undefined
-				? { data: data.items }
-				: { data }),
+			data
 		});
 	};
 
