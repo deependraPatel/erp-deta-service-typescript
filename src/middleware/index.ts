@@ -9,6 +9,7 @@ const ignoreRequestStrings: Array<string> = [
 	"img/",
 	"assets/",
 	"static/",
+	"assets/",
 	"manifest.json",
 ]; // Don't log request if one of the strings are in URL
 

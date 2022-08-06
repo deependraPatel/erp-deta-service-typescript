@@ -14,7 +14,6 @@ dotenv.config();
 
 const app: Express = express();
 
-// app.set('view engine', 'ejs');
 app.use(routeLog);
 app.use(sendResponse);
 

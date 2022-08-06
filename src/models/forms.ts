@@ -1,6 +1,6 @@
-import Crud from "../services/crud";
+import DetaCrud from "../services/deta-crud";
 
-const db = Crud.use("forms");
+const db = DetaCrud.use("forms");
 
 export interface Columns {
 	elementJsonStiring: string;

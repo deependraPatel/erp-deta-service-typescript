@@ -20,6 +20,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/ideependraniranjan/tta-service#readme",
   "dependencies": {
+    "@supabase/supabase-js": "^1.35.6",
     "axios": "^0.27.2",
     "body-parser": "^1.20.0",
     "compression": "^1.7.4",

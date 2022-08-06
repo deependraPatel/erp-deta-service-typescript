@@ -1,4 +1,4 @@
-import db from "./db";
+import db from "./deta";
 
 export default class Assets {
 	private detaDrive: any;

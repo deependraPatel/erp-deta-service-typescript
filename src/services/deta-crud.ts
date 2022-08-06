@@ -1,7 +1,7 @@
 import { generateId, generateKey } from "../utils/randome-key";
-import db from "./db";
+import db from "./deta";
 
-export default class Crud {
+export default class DetaCrud {
 	db: any;
 	descendingOrder: boolean;
 
@@ -99,7 +99,7 @@ export default class Crud {
 		return res.items[0];
 	}
 
-	static use(name: string, descendingOrder = false): Crud {
-		return new Crud(name, descendingOrder);
+	static use(name: string, descendingOrder = false): DetaCrud {
+		return new DetaCrud(name, descendingOrder);
 	}
 }
